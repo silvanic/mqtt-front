@@ -38,8 +38,9 @@ export class AppComponent {
   login() {
     if (this.username) {
       this.error = '';
+
       // this.client = mqtt.connect('http://localhost:8888', {
-      this.client = mqtt.connect('https://mqtt-back.onrender.com:8888', {
+      this.client = mqtt.connect('ws://mqtt-back.onrender.com', {
         username: this.username,
       });
 
