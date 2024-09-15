@@ -42,6 +42,7 @@ export class AppComponent {
       // this.client = mqtt.connect('http://localhost:8888', {
       this.client = mqtt.connect('ws://mqtt-back.onrender.com', {
         username: this.username,
+        protocol: 'wss'
       });
 
       this.client.on('error', (error) => {
